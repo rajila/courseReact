@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script crossorigin src="https://unpkg.com/react@17/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <title>Hola Mundo</title>
+</head>
+<body>
+    <!--- Etiqueta para renderizar los elementos creados en React -->
+    <div id="root"></div>
+    <hr />
+    <div id="lista"></div>
+    <hr />
+    <div id="listaJSXBabel"></div>
+
+    <script type="text/babel">
+        // React puro YA NO SE USA
+        ReactDOM.render(
+            React.createElement('h1', null, 'Hola Mundo'), // Crea un elemento h1 con el texto Hola Mundo 
+            document.getElementById('root') // Selecciona el elemento con el id root
+        );
+
+        // React puro YA NO SE USA
+        ReactDOM.render(
+            React.createElement('ol', null, // Crea un elemento OL padre
+                React.createElement("li", null, "Spain"), // crea un elemento LI hijo
+                React.createElement("li", null, "Portugal"), // crea un elemento LI hijo
+                React.createElement("li", null, "France") // crea un elemento LI hijo
+            ),
+            document.getElementById('lista')
+        );
+
+        // React con JSX, Babel
+        ReactDOM.render(
+            <ol>
+                <li>Pera</li>
+                <li>Manzana</li>
+                <li>Uva</li>
+            </ol>,
+            document.getElementById('listaJSXBabel')
+        );
+
+    </script>
+</body>
+</html>
