@@ -16,6 +16,8 @@
     <div id="lista"></div>
     <hr />
     <div id="listaJSXBabel"></div>
+    <hr />
+    <div id="saludoComponent"></div>
 
     <script type="text/babel">
         // React puro YA NO SE USA
@@ -43,6 +45,16 @@
             </ol>,
             document.getElementById('listaJSXBabel')
         );
+
+        // Definición de componente Saludo con React puro YA NO SE USA
+        class Saludo extends React.Component {
+            render() {
+                return (<h1>Hola mundo from Component</h1>);
+            }
+        }
+
+        // Renderizado de componente Saludo
+        ReactDOM.render( <Saludo />, document.getElementById('saludoComponent'));
 
     </script>
 </body>
