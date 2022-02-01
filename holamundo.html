@@ -20,6 +20,8 @@
     <div id="saludoComponent"></div>
     <hr />
     <div id="saludoComponentArrowF"></div>
+    <hr />
+    <div id="fechaComponent"></div>
 
     <script type="text/babel">
         // React puro YA NO SE USA
@@ -63,6 +65,12 @@
             return (<h1>Hola mundo from arrow function</h1>);
         }
         ReactDOM.render( <Mensaje />, document.getElementById('saludoComponentArrowF'));
+
+        const Fecha = () => {
+            const name = "Ronald";
+            return (<h1>{name} la fecha es {new Date().toLocaleDateString()}</h1>);
+        }
+        ReactDOM.render( <Fecha />, document.getElementById('fechaComponent'));
 
     </script>
 </body>
