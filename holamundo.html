@@ -22,6 +22,8 @@
     <div id="saludoComponentArrowF"></div>
     <hr />
     <div id="fechaComponent"></div>
+    <hr />
+    <div id="contador"></div>
 
     <script type="text/babel">
         // React puro YA NO SE USA
@@ -71,6 +73,20 @@
             return (<h1>{name} la fecha es {new Date().toLocaleDateString()}</h1>);
         }
         ReactDOM.render( <Fecha />, document.getElementById('fechaComponent'));
+
+        // Varaiables de estado
+        const Contador = () => {
+            const [contador, setContador] = React.useState(0); // Definir una variable de estado
+            console.log('contador ext', contador);
+            setTimeout(() => {
+                console.log('ini', new Date());
+                setContador(contador + 1000);
+                console.error('contador int', contador);
+                console.log('fin',new Date());
+            }, 1000 + contador);
+            return (<h1>{contador}</h1>);
+        }
+        ReactDOM.render( <Contador />, document.getElementById('contador'));
 
     </script>
 </body>
