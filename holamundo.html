@@ -18,6 +18,8 @@
     <div id="listaJSXBabel"></div>
     <hr />
     <div id="saludoComponent"></div>
+    <hr />
+    <div id="saludoComponentArrowF"></div>
 
     <script type="text/babel">
         // React puro YA NO SE USA
@@ -55,6 +57,12 @@
 
         // Renderizado de componente Saludo
         ReactDOM.render( <Saludo />, document.getElementById('saludoComponent'));
+
+        // function arrow: Forma Actual de crear un componente
+        const Mensaje = () => {
+            return (<h1>Hola mundo from arrow function</h1>);
+        }
+        ReactDOM.render( <Mensaje />, document.getElementById('saludoComponentArrowF'));
 
     </script>
 </body>
