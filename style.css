@@ -1,0 +1,19 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #554f4f;
+    color: snow;
+    text-align: center;
+}
+
+.red {
+    color: tomato;
+}
+
+.green {
+    color: limegreen;
+}
+
+button {
+    margin: 0px 0.5em;
+}

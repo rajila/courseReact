@@ -5,7 +5,7 @@ const Contador = () => {
 
     return (
         <div>
-            <h1>Contador: {contador}</h1>
+            <h1 className={contador > 0 ? "green":"red"}>Contador: {contador}</h1>
             <hr />
             <button onClick={actionIncrementar}>+ Incrementar</button>
             <button onClick={actionDecrementar}>- Decrementar</button>
